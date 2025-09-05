@@ -1,14 +1,13 @@
 {
   "name": "discord-bot",
   "version": "1.0.0",
-  "description": "Discord bot with ping command",
+  "description": "A simple Discord bot with ping command",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1",
-    "node-fetch": "^3.4.1"
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1"
   }
 }
