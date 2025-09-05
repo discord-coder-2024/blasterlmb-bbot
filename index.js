@@ -33,6 +33,7 @@ client.on('messageCreate', async message => {
       message.channel.send('❌ You must provide a message to say.');
       return;
     }
+    await message.delete().catch(() => {}); // delete user command
     message.channel.send(text);
     return;
   }
@@ -48,6 +49,8 @@ client.on('messageCreate', async message => {
       return;
     }
 
+    await message.delete().catch(() => {}); // delete user command
+
     try {
       const user = await client.users.fetch(userId);
       await user.send(dmMessage);
@@ -61,3 +64,4 @@ client.on('messageCreate', async message => {
 });
 
 client.login(process.env.TOKEN);
+
